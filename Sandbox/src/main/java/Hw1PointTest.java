@@ -4,9 +4,10 @@
 public class Hw1PointTest {
   public static void main(String[] args) {
 
-    Point p = new Point(1, 2, 8, 9);
-    // Point p2 = new Point(7, 8);
+    Point p1 = new Point(1, 2);
 
-    System.out.println("Distance between two points"+" "+p.x1 +", "+p.y1+ " and "+p.x2 +", "+p.y2+" =" + " "+ p.distance());
+    Point p2 = new Point(7, 8);
+
+    System.out.println("Distance between two points" + " " + p1.x + ", " + p1.y + " and " + p2.x + ", " + p2.y + " =" + " " + p1.distance(p2));
   }
 }
