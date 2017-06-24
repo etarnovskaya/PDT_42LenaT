@@ -114,4 +114,12 @@ public class TestBase {
   protected void returnToGroupPage() {
       wd.findElement(By.linkText("group page")).click();
   }
+
+  protected void deleteSelectedContacts() {
+    wd.findElement(By.xpath("//div[@id='content']/form[2]/div[2]/input")).click();
+  }
+
+  protected void selectFirstContact() {
+    wd.findElement(By.id("1")).click();
+  }
 }
