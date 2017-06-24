@@ -7,15 +7,13 @@ import ru.stqa.pdt.adressbook.model.ContactData;
 /**
  * Created by Lena on 24/06/2017.
  */
-public class ContactHelper extends HelperBase{
+public class ContactHelper extends HelperBase {
 
   public ContactHelper(FirefoxDriver wd) {
     super(wd);
   }
 
   public void fillContactForm(ContactData contactData) {
-
-
     type(By.name("firstname"), contactData.getFirstName());
     type(By.name("middlename"), contactData.getMiddleName());
     type(By.name("lastname"), contactData.getLastName());
@@ -41,4 +39,12 @@ public class ContactHelper extends HelperBase{
     click(By.id("1"));
   }
 
+  public void initContactModification() {
+    click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
+
+  }
+
+  public void confirmContactModification() {
+    click(By.xpath("//div[@id='content']/form[1]/input[22]"));
+  }
 }
