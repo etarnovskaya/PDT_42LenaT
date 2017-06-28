@@ -1,5 +1,6 @@
 package ru.stqa.pdt.adressbook.appmanager;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pdt.adressbook.model.ContactData;
@@ -36,7 +37,7 @@ public class ContactHelper extends HelperBase {
   }
 
   public void selectFirstContact() {
-    click(By.id("1"));
+    click(By.name("selected[]"));
   }
 
   public void initContactModification() {
@@ -46,5 +47,11 @@ public class ContactHelper extends HelperBase {
 
   public void confirmContactModification() {
     click(By.xpath("//div[@id='content']/form[1]/input[22]"));
+  }
+
+  public void confirmAlertContactDeletion(){
+
+    wd.switchTo().alert().accept();
+
   }
 }
