@@ -1,8 +1,6 @@
 package ru.stqa.pdt.adressbook.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pdt.adressbook.model.GroupData;
 
@@ -11,7 +9,7 @@ import ru.stqa.pdt.adressbook.model.GroupData;
  */
 public class GroupHelper extends HelperBase {
 
-  public GroupHelper(WebDriver wd) {
+  public GroupHelper(FirefoxDriver wd) {
     super(wd);
   }
 
