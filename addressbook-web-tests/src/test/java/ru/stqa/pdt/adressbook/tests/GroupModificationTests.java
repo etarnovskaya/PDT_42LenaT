@@ -10,6 +10,9 @@ public class GroupModificationTests extends TestBase {
   @Test
   public void testGroupModification() {
     app.getNavigationHelper().goToGroupPage();
+    if (! app.getGroupHelper().isThereAGroup()){
+      app.getGroupHelper().createGroup(new GroupData("new1", null, null));
+    }
     app.getGroupHelper().selectGroup();
     app.getGroupHelper().initGroupModification();
     app.getGroupHelper().fillGroupForm(new GroupData("Renew1", "REheader", "footer"));
