@@ -12,7 +12,7 @@ public class GroupData {
 
 
   public GroupData(int id, String groupName, String header, String footer) {
-    this.id = Integer.MAX_VALUE;
+    this.id = id;
     this.groupName = groupName;
     this.header = header;
     this.footer = footer;

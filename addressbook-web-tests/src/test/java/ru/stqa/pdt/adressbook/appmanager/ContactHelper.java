@@ -80,7 +80,7 @@ public class ContactHelper extends HelperBase {
   }
 
   public void selectContactForModify(int index) {
-    wd.findElements(By.name("entry")).get(index).click();
+    wd.findElements(By.cssSelector("td.center")).get(index).click();
   }
   public void selectContactCheckBox(int index) {
     wd.findElements(By.name("selected[]")).get(index).click();

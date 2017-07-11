@@ -48,7 +48,7 @@ public class ContactData {
 
   public ContactData(int id, String firstName, String middleName, String lastName,
                      String address, String phone, String email, String notes, String group) {
-    this.id = 0;
+    this.id = id;
     this.firstName = firstName;
     this.middleName = middleName;
     this.lastName = lastName;
