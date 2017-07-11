@@ -79,7 +79,10 @@ public class ContactHelper extends HelperBase {
     return wd.findElements(By.name("selected[]")).size();
   }
 
-  public void selectContact(int index) {
+  public void selectContactForModify(int index) {
+    wd.findElements(By.name("entry")).get(index).click();
+  }
+  public void selectContactCheckBox(int index) {
     wd.findElements(By.name("selected[]")).get(index).click();
   }
 

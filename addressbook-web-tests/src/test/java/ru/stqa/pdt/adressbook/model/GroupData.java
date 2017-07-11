@@ -13,7 +13,6 @@ public class GroupData {
 
   public GroupData(int id, String groupName, String header, String footer) {
     this.id = Integer.MAX_VALUE;
-
     this.groupName = groupName;
     this.header = header;
     this.footer = footer;
@@ -25,6 +24,10 @@ public class GroupData {
     this.groupName = groupName;
     this.header = header;
     this.footer = footer;
+  }
+
+  public int getId() {
+    return id;
   }
 
   public String getGroupName() {
@@ -39,6 +42,8 @@ public class GroupData {
     return footer;
   }
 
+
+
   @Override
   public String toString() {
 
@@ -49,9 +54,7 @@ public class GroupData {
             '}';
   }
 
-  public int getId() {
-    return id;
-  }
+
 
   @Override
   public boolean equals(Object o) {

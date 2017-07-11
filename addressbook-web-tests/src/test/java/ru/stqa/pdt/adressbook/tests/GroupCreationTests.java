@@ -23,6 +23,8 @@ public class GroupCreationTests extends TestBase {
     before.add(group);
 
     Comparator<? super GroupData> ById = (g1,g2) -> Integer.compare(g1.getId(), g2.getId());
+
+
     before.sort(ById);
     after.sort(ById);
     Assert.assertEquals(before, after);

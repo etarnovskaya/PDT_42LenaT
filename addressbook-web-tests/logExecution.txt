@@ -1,0 +1,184 @@
+"C:\Program Files\Java\jdk1.8.0_131\bin\java" -ea -Didea.test.cyclic.buffer.size=1048576 "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.1.1\lib\idea_rt.jar=57098:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.1.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.1.1\lib\idea_rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.1.1\plugins\testng\lib\testng-plugin.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Users\Lena\Documents\GitHub\PDT_42LenaT\addressbook-web-tests\build\classes\java\test;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.testng\testng\6.11\1fdd5e22f50b14f6d846163456e8c9a7657626fb\testng-6.11.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\com.codeborne\phantomjsdriver\1.4.0\333f3289207a970c9a97308df9d5ac0880e12aa8\phantomjsdriver-1.4.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-java\3.4.0\2b8e09636cefdb164eec61534482af5e505d051e\selenium-java-3.4.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\com.beust\jcommander\1.64\456a985ac9b12d34820e4d5de063b2c2fc43ed5a\jcommander-1.64.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.yaml\snakeyaml\1.17\7a27ea250c5130b2922b86dea63cbb1cc10a660c\snakeyaml-1.17.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-chrome-driver\3.4.0\5a3533c1ec2ba883beb0314dacf7ff932163a4ef\selenium-chrome-driver-3.4.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-edge-driver\3.4.0\cbccda6be9f86ec1ae0c79f94cdb4e2615e6c107\selenium-edge-driver-3.4.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-firefox-driver\3.4.0\d88e50771a0c978502dfdf770d3192c7643928eb\selenium-firefox-driver-3.4.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-ie-driver\3.4.0\fdce0dc1cbdcd93d1b5b2e9054285160bed0a027\selenium-ie-driver-3.4.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-opera-driver\3.4.0\35a04998f67c920a2d274c73f4a27018f7d640e6\selenium-opera-driver-3.4.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-safari-driver\3.4.0\75f8302d3f6274af5c9580ea194d4df19bb4a363\selenium-safari-driver-3.4.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\htmlunit-driver\2.26\ead9f974e6f8b42ae01452e7dc08335ca5ac4797\htmlunit-driver-2.26.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-support\3.4.0\900176a308fbf55d741a168a3beac8527caf1c1\selenium-support-3.4.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-remote-driver\3.4.0\2593094fccb4f0317e211674ebfc22fb049c043a\selenium-remote-driver-3.4.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-api\3.4.0\bf91d238e6eb07f8496ccb61e12e2c868d2bc7e9\selenium-api-3.4.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\cglib\cglib-nodep\3.2.4\42c972dee25a436b32c6027e848287ff47ed6750\cglib-nodep-3.2.4.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-exec\1.3\8dfb9facd0830a27b1b5f29f84593f0aeee7773b\commons-exec-1.3.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\net.sourceforge.htmlunit\htmlunit\2.26\756789277013723c354dcf9a09740d418874afc0\htmlunit-2.26.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.5\6c6c702c89bfff3cd9e80b04d668c5e190d588c6\commons-lang3-3.5.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpmime\4.5.3\889fd6d061bb63b99dd5c6aba35a555ae863de52\httpmime-4.5.3.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.5.3\d1577ae15f01ef5438c5afc62162457c00a34713\httpclient-4.5.3.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.10\4b95f4897fa13f2cd904aee711aeafc0c5295cd8\commons-codec-1.10.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.5\2852e6e05fbb95076fc091f6d1780f1f8fe35e0f\commons-io-2.5.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686\commons-logging-1.2.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\net.sourceforge.cssparser\cssparser\0.9.22\3200e4091f08f78bed01350dbc1e200068f7f162\cssparser-0.9.22.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.w3c.css\sac\1.3\cdb2dcb4e22b83d6b32b93095f644c3462739e82\sac-1.3.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\21.0\3a3d111be1be1b745edfa7d91678a12d7ed38709\guava-21.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\junit\junit\4.12\2973d150c0dc1fefe998f834810d68f278ea58ec\junit-4.12.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-core\1.3\42a25dc3219429f0e5d060061f71acb49bf010a0\hamcrest-core-1.3.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\net.sourceforge.htmlunit\htmlunit-core-js\2.26\cd4cc09378ab2eaa2757c9b1203e29af1cffe880\htmlunit-core-js-2.26.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\net.sourceforge.htmlunit\neko-htmlunit\2.25\7bcd512ace3baedd5d0abc159cfd57cfb3026c83\neko-htmlunit-2.25.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.6\e3fd8ced1f52c7574af952e2e6da0df8df08eb82\httpcore-4.4.6.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty.websocket\websocket-client\9.4.3.v20170317\8d7a6d6ddb477bc2962936373503daf07b79f9ed\websocket-client-9.4.3.v20170317.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty.websocket\websocket-common\9.4.3.v20170317\e987016d0fbe3fa46a0c969d143e25a10eb16249\websocket-common-9.4.3.v20170317.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-client\9.4.3.v20170317\7e8ca5acbd6e1b93e326c54758cdc6190d0fa944\jetty-client-9.4.3.v20170317.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-http\9.4.3.v20170317\8f73fbfaabb3a3b2d5b3a2ddad15c19c7f00a876\jetty-http-9.4.3.v20170317.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-io\9.4.3.v20170317\c2b20cfd32d74e74c030c0b77fa64d01434f2e3\jetty-io-9.4.3.v20170317.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-util\9.4.3.v20170317\1d3299563053e2290338e22db693a8d442e7fb25\jetty-util-9.4.3.v20170317.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna-platform\4.1.0\23457ad1cf75c2c16763330de5565a0e67b4bc0a\jna-platform-4.1.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\4.1.0\1c12d070e602efd8021891cdd7fd18bc129372d4\jna-4.1.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\javax.servlet\javax.servlet-api\3.1.0\3cd63d075497751784b2fa84be59432f4905bf7c\javax.servlet-api-3.1.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty.websocket\websocket-api\9.4.3.v20170317\d0f1fd89dc19e773334ad2fcfda2bb0eadf993f6\websocket-api-9.4.3.v20170317.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\xalan\xalan\2.7.2\d55d3f02a56ec4c25695fe67e1334ff8c2ecea23\xalan-2.7.2.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\xalan\serializer\2.7.2\24247f3bb052ee068971393bdb83e04512bb1c3c\serializer-2.7.2.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\xerces\xercesImpl\2.11.0\9bb329db1cfc4e22462c9d6b43a8432f5850e92c\xercesImpl-2.11.0.jar;C:\Users\Lena\.gradle\caches\modules-2\files-2.1\xml-apis\xml-apis\1.4.01\3789d9fada2d3d458c4ba2de349d48780f381ee3\xml-apis-1.4.01.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.1.1\plugins\testng\lib\jcommander.jar" org.testng.RemoteTestNGStarter -usedefaultlisteners false -socket57097 @w@C:\Users\Lena\AppData\Local\Temp\idea_working_dirs_testng2.tmp -temp C:\Users\Lena\AppData\Local\Temp\idea_testng2.tmp
+1499772393211	addons.manager	DEBUG	Application has been upgraded
+1499772393250	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: ["XPIProvider"]
+1499772393253	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: ["LightweightThemeManager"]
+1499772393257	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/GMPProvider.jsm
+1499772393260	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
+1499772393261	addons.manager	DEBUG	Starting provider: XPIProvider
+1499772393261	addons.xpi	DEBUG	startup
+1499772393263	addons.xpi	INFO	Mapping fxdriver@googlecode.com to C:\Users\Lena\AppData\Local\Temp\anonymous138662349094874285webdriver-profile\extensions\fxdriver@googlecode.com
+1499772393263	addons.xpi	DEBUG	Ignoring file entry whose name is not a valid add-on ID: C:\Users\Lena\AppData\Local\Temp\anonymous138662349094874285webdriver-profile\extensions\webdriver-staging
+1499772393264	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1499772393265	addons.xpi	INFO	Mapping aushelper@mozilla.org to C:\Program Files\Mozilla Firefox ESR\browser\features\aushelper@mozilla.org.xpi
+1499772393265	addons.xpi	INFO	Mapping e10srollout@mozilla.org to C:\Program Files\Mozilla Firefox ESR\browser\features\e10srollout@mozilla.org.xpi
+1499772393265	addons.xpi	INFO	Mapping firefox@getpocket.com to C:\Program Files\Mozilla Firefox ESR\browser\features\firefox@getpocket.com.xpi
+1499772393266	addons.xpi	INFO	Mapping webcompat@mozilla.org to C:\Program Files\Mozilla Firefox ESR\browser\features\webcompat@mozilla.org.xpi
+1499772393267	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files\Mozilla Firefox ESR\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+1499772393267	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1499772393267	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1499772393268	addons.xpi	DEBUG	checkForChanges
+1499772393269	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1499772393269	addons.xpi	DEBUG	Loaded add-on state from prefs: {}
+1499772393270	addons.xpi	DEBUG	New add-on fxdriver@googlecode.com in app-profile
+1499772393271	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1499772393277	addons.xpi	DEBUG	New add-on aushelper@mozilla.org in app-system-defaults
+1499772393277	addons.xpi	DEBUG	getModTime: Recursive scan of aushelper@mozilla.org
+1499772393278	addons.xpi	DEBUG	New add-on e10srollout@mozilla.org in app-system-defaults
+1499772393278	addons.xpi	DEBUG	getModTime: Recursive scan of e10srollout@mozilla.org
+1499772393279	addons.xpi	DEBUG	New add-on firefox@getpocket.com in app-system-defaults
+1499772393279	addons.xpi	DEBUG	getModTime: Recursive scan of firefox@getpocket.com
+1499772393280	addons.xpi	DEBUG	New add-on webcompat@mozilla.org in app-system-defaults
+1499772393280	addons.xpi	DEBUG	getModTime: Recursive scan of webcompat@mozilla.org
+1499772393281	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1499772393281	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1499772393282	addons.xpi	DEBUG	getInstallState changed: true, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\Lena\\AppData\\Local\\Temp\\anonymous138662349094874285webdriver-profile\\extensions\\fxdriver@googlecode.com","st":1499772392753,"mt":1499772392685}},"app-system-defaults":{"aushelper@mozilla.org":{"d":"C:\\Program Files\\Mozilla Firefox ESR\\browser\\features\\aushelper@mozilla.org.xpi","st":1496869761000},"e10srollout@mozilla.org":{"d":"C:\\Program Files\\Mozilla Firefox ESR\\browser\\features\\e10srollout@mozilla.org.xpi","st":1496869761000},"firefox@getpocket.com":{"d":"C:\\Program Files\\Mozilla Firefox ESR\\browser\\features\\firefox@getpocket.com.xpi","st":1496869761000},"webcompat@mozilla.org":{"d":"C:\\Program Files\\Mozilla Firefox ESR\\browser\\features\\webcompat@mozilla.org.xpi","st":1496869761000}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files\\Mozilla Firefox ESR\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","st":1496869761000}}}
+1499772393291	addons.xpi-utils	DEBUG	Opening XPI database C:\Users\Lena\AppData\Local\Temp\anonymous138662349094874285webdriver-profile\extensions.json
+1499772393293	addons.xpi-utils	DEBUG	New add-on fxdriver@googlecode.com installed in app-profile
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1499772393316	DeferredSave.extensions.json	DEBUG	Save changes
+1499772393316	addons.xpi-utils	DEBUG	New add-on aushelper@mozilla.org installed in app-system-defaults
+1499772393320	DeferredSave.extensions.json	DEBUG	Starting timer
+1499772393322	DeferredSave.extensions.json	DEBUG	Save changes
+1499772393322	addons.xpi-utils	DEBUG	New add-on e10srollout@mozilla.org installed in app-system-defaults
+1499772393329	DeferredSave.extensions.json	DEBUG	Save changes
+1499772393330	addons.xpi-utils	DEBUG	New add-on firefox@getpocket.com installed in app-system-defaults
+1499772393339	DeferredSave.extensions.json	DEBUG	Save changes
+1499772393339	addons.xpi-utils	DEBUG	New add-on webcompat@mozilla.org installed in app-system-defaults
+1499772393344	DeferredSave.extensions.json	DEBUG	Save changes
+1499772393344	addons.xpi-utils	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+1499772393352	DeferredSave.extensions.json	DEBUG	Starting write
+1499772393357	DeferredSave.extensions.json	DEBUG	Save changes
+1499772393357	DeferredSave.extensions.json	DEBUG	Data changed while write in progress
+1499772393359	addons.manager	DEBUG	Registering startup change 'installed' for fxdriver@googlecode.com
+1499772393360	addons.xpi-utils	DEBUG	Make addon app-profile:fxdriver@googlecode.com visible
+1499772393365	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1499772393365	DeferredSave.extensions.json	DEBUG	Save changes
+1499772393365	addons.manager	DEBUG	Registering startup change 'installed' for aushelper@mozilla.org
+1499772393374	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox ESR\browser\features\aushelper@mozilla.org.xpi
+1499772393380	addons.xpi	DEBUG	Calling bootstrap method install on aushelper@mozilla.org version 2.0
+1499772393380	addons.xpi-utils	DEBUG	Make addon app-system-defaults:aushelper@mozilla.org visible
+1499772393380	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1499772393380	DeferredSave.extensions.json	DEBUG	Save changes
+1499772393381	addons.manager	DEBUG	Registering startup change 'installed' for e10srollout@mozilla.org
+1499772393381	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox ESR\browser\features\e10srollout@mozilla.org.xpi
+1499772393384	addons.xpi	DEBUG	Calling bootstrap method install on e10srollout@mozilla.org version 1.10
+1499772393385	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1499772393385	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1499772393386	addons.xpi-utils	DEBUG	Make addon app-system-defaults:e10srollout@mozilla.org visible
+1499772393386	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1499772393386	DeferredSave.extensions.json	DEBUG	Save changes
+1499772393387	addons.manager	DEBUG	Registering startup change 'installed' for firefox@getpocket.com
+1499772393388	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox ESR\browser\features\firefox@getpocket.com.xpi
+1499772393393	addons.xpi	DEBUG	Calling bootstrap method install on firefox@getpocket.com version 1.0.5
+1499772393393	addons.xpi-utils	DEBUG	Make addon app-system-defaults:firefox@getpocket.com visible
+1499772393393	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1499772393393	DeferredSave.extensions.json	DEBUG	Save changes
+1499772393394	addons.manager	DEBUG	Registering startup change 'installed' for webcompat@mozilla.org
+1499772393394	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files\Mozilla Firefox ESR\browser\features\webcompat@mozilla.org.xpi
+1499772393397	addons.xpi	DEBUG	Calling bootstrap method install on webcompat@mozilla.org version 1.0
+1499772393397	addons.xpi-utils	DEBUG	Make addon app-system-defaults:webcompat@mozilla.org visible
+1499772393397	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1499772393398	DeferredSave.extensions.json	DEBUG	Save changes
+1499772393398	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+1499772393398	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1499772393398	DeferredSave.extensions.json	DEBUG	Save changes
+1499772393399	addons.xpi	DEBUG	Updating XPIState for {"id":"fxdriver@googlecode.com","syncGUID":"{3bc342d1-dfbf-489e-b27f-58e48fffab0e}","location":"app-profile","version":"3.4.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Firefox WebDriver","description":"WebDriver implementation for Firefox","creator":"Simon Stewart","homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Users\\Lena\\AppData\\Local\\Temp\\anonymous138662349094874285webdriver-profile\\extensions\\fxdriver@googlecode.com","installDate":1499772392753,"updateDate":1499772392753,"applyBackgroundUpdates":1,"bootstrap":false,"skinnable":false,"size":3303362,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":true,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"3.0","maxVersion":"48.0"}],"targetPlatforms":[{"os":"Darwin","abi":null},{"os":"SunOS","abi":null},{"os":"FreeBSD","abi":null},{"os":"OpenBSD","abi":null},{"os":"WINNT","abi":null},{"os":"Linux","abi":null}],"multiprocessCompatible":false,"signedState":0,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1499772393399	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1499772393403	addons.xpi	DEBUG	Updating XPIState for {"id":"aushelper@mozilla.org","syncGUID":"{b115e9cb-f21c-4f46-b564-d9954176a0aa}","location":"app-system-defaults","version":"2.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Application Update Service Helper","description":"Sets value(s) in the update url based on custom checks.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox ESR\\browser\\features\\aushelper@mozilla.org.xpi","installDate":1496869761000,"updateDate":1496869761000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":8488,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.2.0","maxVersion":"52.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1499772393403	addons.xpi	DEBUG	getModTime: Recursive scan of aushelper@mozilla.org
+1499772393404	addons.xpi	DEBUG	Updating XPIState for {"id":"e10srollout@mozilla.org","syncGUID":"{4320cc0d-3a53-482d-802e-d41f25e6385f}","location":"app-system-defaults","version":"1.10","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Multi-process staged rollout","description":"Staged rollout of Firefox multi-process feature.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox ESR\\browser\\features\\e10srollout@mozilla.org.xpi","installDate":1496869761000,"updateDate":1496869761000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":8145,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.2.0","maxVersion":"52.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1499772393404	addons.xpi	DEBUG	getModTime: Recursive scan of e10srollout@mozilla.org
+1499772393405	addons.xpi	DEBUG	Updating XPIState for {"id":"firefox@getpocket.com","syncGUID":"{1b820aab-d880-41a4-923e-382d8e68ad4a}","location":"app-system-defaults","version":"1.0.5","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Pocket","description":"When you find something you want to view later, put it in Pocket.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox ESR\\browser\\features\\firefox@getpocket.com.xpi","installDate":1496869761000,"updateDate":1496869761000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":920281,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.2.0","maxVersion":"52.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1499772393405	addons.xpi	DEBUG	getModTime: Recursive scan of firefox@getpocket.com
+1499772393405	addons.xpi	DEBUG	Updating XPIState for {"id":"webcompat@mozilla.org","syncGUID":"{811a86df-a419-4e76-80cc-f0bd84aab684}","location":"app-system-defaults","version":"1.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Web Compat","description":"Urgent post-release fixes for web compatibility.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox ESR\\browser\\features\\webcompat@mozilla.org.xpi","installDate":1496869761000,"updateDate":1496869761000,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":1456,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.2.0","maxVersion":"52.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1499772393406	addons.xpi	DEBUG	getModTime: Recursive scan of webcompat@mozilla.org
+1499772393407	addons.xpi	DEBUG	Updating XPIState for {"id":"{972ce4c6-7e08-4474-a285-3208198ce6fd}","syncGUID":"{ee46b0c3-576f-428f-95c3-6e04299609fd}","location":"app-global","version":"52.2.0","type":"theme","internalName":"classic/1.0","updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{"32":"icon.png","48":"icon.png"},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Default","description":"The default theme.","creator":"Mozilla","homepageURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox ESR\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","installDate":1496869761000,"updateDate":1496869761000,"applyBackgroundUpdates":1,"skinnable":true,"size":19587,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.2.0","maxVersion":"52.2.0"}],"targetPlatforms":[],"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false}
+1499772393407	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1499772393408	addons.xpi	DEBUG	Add-on fxdriver@googlecode.com blocks e10s rollout.
+1499772393408	DeferredSave.extensions.json	DEBUG	Save changes
+1499772393409	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1499772393409	addons.xpi-utils	DEBUG	Updating add-on states
+1499772393410	addons.xpi-utils	DEBUG	Writing add-ons list
+1499772393421	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox ESR\browser\features\aushelper@mozilla.org.xpi
+1499772393423	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 2.0
+1499772393427	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox ESR\browser\features\e10srollout@mozilla.org.xpi
+1499772393429	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.10
+1499772393430	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox ESR\browser\features\firefox@getpocket.com.xpi
+1499772393432	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1499772393433	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox ESR\browser\features\webcompat@mozilla.org.xpi
+1499772393435	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.0
+1499772393442	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1499772393442	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1499772393442	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1499772393443	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1499772393443	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1499772393443	addons.manager	DEBUG	Starting provider: GMPProvider
+1499772393454	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1499772393455	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1499772393455	addons.manager	DEBUG	Starting provider: PluginProvider
+1499772393455	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1499772393456	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1499772393456	addons.manager	DEBUG	Completed startup sequence
+1499772393901	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1499772393901	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1499772393902	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1499772394175	DeferredSave.extensions.json	DEBUG	Write succeeded
+1499772394175	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 19
+1499772394176	DeferredSave.extensions.json	DEBUG	Starting timer
+1499772394196	addons.repository	DEBUG	No addons.json found.
+1499772394197	DeferredSave.addons.json	DEBUG	Save changes
+1499772394200	DeferredSave.addons.json	DEBUG	Starting timer
+1499772394238	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1499772394239	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1499772394242	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1499772394246	DeferredSave.extensions.json	DEBUG	Starting write
+1499772394254	DeferredSave.addons.json	DEBUG	Starting write
+1499772394318	DeferredSave.extensions.json	DEBUG	Write succeeded
+1499772394326	DeferredSave.addons.json	DEBUG	Write succeeded
+יול 11, 2017 2:26:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+
+java.lang.AssertionError: 
+Expected :[GroupData{id='2147483647', groupName='new1'}, GroupData{id='2147483647', groupName='new1'}, GroupData{id='2147483647', groupName='new2'}, GroupData{id='2147483647', groupName='new2'}, GroupData{id='2147483647', groupName='new2'}, GroupData{id='2147483647', groupName='new2'}, GroupData{id='2147483647', groupName='new2'}, GroupData{id='2147483647', groupName='new2'}, GroupData{id='2147483647', groupName='Renew1'}, GroupData{id='2147483647', groupName='new2'}]
+Actual   :[GroupData{id='2147483647', groupName='new1'}, GroupData{id='2147483647', groupName='new1'}, GroupData{id='2147483647', groupName='new2'}, GroupData{id='2147483647', groupName='new2'}, GroupData{id='2147483647', groupName='new2'}, GroupData{id='2147483647', groupName='new2'}, GroupData{id='2147483647', groupName='new2'}, GroupData{id='2147483647', groupName='new2'}, GroupData{id='2147483647', groupName='new2'}, GroupData{id='2147483647', groupName='Renew1'}]
+ <Click to see difference>
+
+
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at ru.stqa.pdt.adressbook.tests.GroupCreationTests.testGroupCreation(GroupCreationTests.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:127)
+
+
+===============================================
+Default Suite
+Total tests run: 1, Failures: 1, Skips: 0
+===============================================
+
+
+Process finished with exit code 0
