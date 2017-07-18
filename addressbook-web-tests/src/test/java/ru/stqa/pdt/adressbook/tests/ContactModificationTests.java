@@ -15,7 +15,7 @@ import java.util.List;
  * Created by Lena on 24/06/2017.
  */
 public class ContactModificationTests extends TestBase {
-  @Test
+  @Test(enabled = false)
   public void testContactModificationLastInList() {
     app.getNavigationHelper().goToHomePage();
     if (! app.getContactHelper().isThereAContact()){
