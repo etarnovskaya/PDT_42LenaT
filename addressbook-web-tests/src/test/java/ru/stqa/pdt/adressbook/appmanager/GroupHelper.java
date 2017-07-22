@@ -38,26 +38,41 @@ public class GroupHelper extends HelperBase {
 
   public void selectGroup(int index) {
     wd.findElements(By.name("selected[]")).get(index).click();
-   // click(By.name("selected[]"));
+    // click(By.name("selected[]"));
   }
 
 //  public void initGroupModification(int index) {
 //    wd.findElements(By.xpath("//div[@id='content']/form/input[6]")).get(index).click();
-   // click(By.xpath("//div[@id='content']/form/input[6]"));
- // }
+  // click(By.xpath("//div[@id='content']/form/input[6]"));
+  // }
 
   public void submitGroupModification() {
     click(By.name("update"));
   }
+
   public void returnToGroupPage() {
     click(By.linkText("group page"));
   }
 
 
-  public void createGroup(GroupData group) {
+  public void create(GroupData group) {
     initGroupCreation();
     fillGroupForm(group);
     submitGroupCreation();
+    returnToGroupPage();
+  }
+
+  public void delete(int index) {
+    selectGroup(index);
+    deleteSelectedGroup();
+    returnToGroupPage();
+  }
+
+  public void modify(int index, GroupData group) {
+    selectGroup(index);
+    initGroupModification();
+    fillGroupForm(group);
+    submitGroupModification();
     returnToGroupPage();
   }
 
@@ -66,7 +81,7 @@ public class GroupHelper extends HelperBase {
   }
 
   public int getGroupCount() {
-    return  wd.findElements(By.name("selected[]")).size();
+    return wd.findElements(By.name("selected[]")).size();
 
   }
 
@@ -74,16 +89,18 @@ public class GroupHelper extends HelperBase {
     click(By.xpath("//div[@id='content']/form/input[6]"));
   }
 
-  public List<GroupData> getGroupList() {
+  public List<GroupData> list() {
     List<GroupData> groups = new ArrayList<GroupData>();
-  List <WebElement> elements = wd.findElements(By.cssSelector("span.group"));
-  for (WebElement element: elements){
-    String name = element.getText();
-    int id = Integer.parseInt(element.findElement(By.name("selected[]")).getAttribute("value"));
+    List<WebElement> elements = wd.findElements(By.cssSelector("span.group"));
+    for (WebElement element : elements) {
+      String name = element.getText();
+      int id = Integer.parseInt(element.findElement(By.name("selected[]")).getAttribute("value"));
 
-    GroupData group = new GroupData(id, name,null, null);
-    groups.add(group);
+      GroupData group = new GroupData(id, name, null, null);
+      groups.add(group);
     }
     return groups;
   }
+
+
 }

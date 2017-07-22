@@ -2,10 +2,7 @@ package ru.stqa.pdt.adressbook.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.BrowserType;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 import ru.stqa.pdt.adressbook.appmanager.ApplicationManager;
 
 /**
@@ -13,17 +10,17 @@ import ru.stqa.pdt.adressbook.appmanager.ApplicationManager;
  */
 public class TestBase {
 
-  protected final ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);
+  protected static final ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);
  //protected final ApplicationManager app = new ApplicationManager(BrowserType.CHROME);
   //protected final ApplicationManager app = new ApplicationManager(BrowserType.IE);
 
-  @BeforeSuite
+  @BeforeClass
   public void setUp() throws Exception {
     app.init();
   }
 
 
-  @AfterSuite
+  @AfterClass
   public void tearDown() {
     app.stop();
   }

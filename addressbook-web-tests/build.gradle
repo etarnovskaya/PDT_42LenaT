@@ -6,6 +6,7 @@ mavenCentral()
 }
 
 dependencies{
-    compile 'org.testng:testng:6.11'
-    compile 'org.seleniumhq.selenium:selenium-java:3.4.0'
+    testCompile 'org.testng:testng:6.11'
+    testCompile 'org.seleniumhq.selenium:selenium-java:3.4.0'
+    testCompile 'junit:junit:4.12'
 }
