@@ -7,33 +7,29 @@ import ru.stqa.pdt.adressbook.model.ContactData;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ContactCreationTests extends TestBase {
 
   @Test(enabled = true)
   public void testContactCreation() {
     app.goTo().homePage();
-    List<ContactData> before = app.contact().list();
-    ContactData contact = new ContactData("fname", "mName",
-            "nextlName1", "Moscow", "999999999", "etarnovskaya@gmail.com",
-            "wow notes", "new1");
-    //int before = app.getContactHelper().getContactCount();
+    Set<ContactData> before = app.contact().all();
+    ContactData contact = new ContactData()
+            .withFirstName("onewfname")
+            .withMiddleName(null)
+            .withLastName("lName")
+            .withAddress("Moscow")
+            .withPhone("999999999")
+            .withEmail("etarnovskaya@gmail.com").withGroup(null).withNotes(null)
+            .withNotes(null);
     app.contact().create(contact);
-    List<ContactData> after = app.contact().list();
+    Set<ContactData> after = app.contact().all();
 
-    //int after = app.getContactHelper().getContactCount();
-//    Assert.assertEquals(after.size(), before.size()+1);
-//    int max =1;
-//    for (ContactData c: after){
-//      if(contact.getId()> max){
-//        max= c.getId();
-//      }
-//    }
 
-    Comparator<? super ContactData> ById =(o1, o2) -> Integer.compare(o1.getId(), o2.getId());
-    contact.setId(after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
+    contact.withId(after.stream().mapToInt((c)->c.getId()).max().getAsInt());
     before.add(contact);
-    Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
+    Assert.assertEquals(before, after);
   }
 
 

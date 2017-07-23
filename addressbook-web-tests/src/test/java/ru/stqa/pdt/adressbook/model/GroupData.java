@@ -1,29 +1,32 @@
 package ru.stqa.pdt.adressbook.model;
 
 public class GroupData {
-  private int id;
-  private final String groupName;
-  private final String header;
-  private final String footer;
+  private int id = Integer.MAX_VALUE;
+  private String groupName;
+  private String header;
+  private String footer;
 
-  public void setId(int id) {
+  public GroupData withId(int id) {
     this.id = id;
+    return this;
   }
 
-
-  public GroupData(int id, String groupName, String header, String footer) {
-    this.id = id;
+  public GroupData withName(String groupName) {
     this.groupName = groupName;
-    this.header = header;
-    this.footer = footer;
+    return this;
 
   }
-  public GroupData(String groupName, String header, String footer) {
-    this.id = Integer.MAX_VALUE;
 
-    this.groupName = groupName;
+  public GroupData withHeader(String header) {
     this.header = header;
+    return this;
+
+  }
+
+  public GroupData withFooter(String footer) {
     this.footer = footer;
+    return this;
+
   }
 
   public int getId() {
@@ -55,7 +58,6 @@ public class GroupData {
   }
 
 
-
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
@@ -63,14 +65,14 @@ public class GroupData {
 
     GroupData groupData = (GroupData) o;
 
+    if (id != groupData.id) return false;
     return groupName != null ? groupName.equals(groupData.groupName) : groupData.groupName == null;
   }
 
   @Override
   public int hashCode() {
-    return groupName != null ? groupName.hashCode() : 0;
+    int result = id;
+    result = 31 * result + (groupName != null ? groupName.hashCode() : 0);
+    return result;
   }
-
-
-
 }
