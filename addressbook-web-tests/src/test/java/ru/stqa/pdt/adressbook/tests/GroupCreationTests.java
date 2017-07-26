@@ -1,17 +1,10 @@
 package ru.stqa.pdt.adressbook.tests;
 
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.Matcher;
-import org.hamcrest.MatcherAssert;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.pdt.adressbook.model.GroupData;
 import ru.stqa.pdt.adressbook.model.Groups;
 
-import java.util.Set;
-
 import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class GroupCreationTests extends TestBase {
@@ -22,6 +15,8 @@ public class GroupCreationTests extends TestBase {
     Groups before = app.group().all();
     GroupData group = new GroupData().withName("test2");
     app.group().create(group);
+    assertThat(app.group().count(), equalTo(before.size() + 1));
+
     Groups after = app.group().all();
     assertThat(after.size(), equalTo(before.size() + 1));
 
@@ -32,5 +27,20 @@ public class GroupCreationTests extends TestBase {
  }
 
 
+  @Test
+  public void testBadGroupCreation() {
+    app.goTo().groupPage();
+    Groups before = app.group().all();
+    GroupData group = new GroupData().withName("test2'");
+    app.group().create(group);
+    assertThat(app.group().count(), equalTo(before.size()));
+    Groups after = app.group().all();
+
+
+    assertThat(after, equalTo(
+            before));
+
+  }
 
 }
+

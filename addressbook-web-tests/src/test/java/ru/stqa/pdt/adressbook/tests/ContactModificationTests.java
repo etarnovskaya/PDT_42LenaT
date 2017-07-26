@@ -26,7 +26,7 @@ public class ContactModificationTests extends TestBase {
               .withFirstName("fname")
               .withLastName("lName")
               .withAddress("Moscow")
-              .withPhone("999999999").withEmail("etarnovskaya@gmail.com"), true);
+              .withHomePhone("999999999").withEmail("etarnovskaya@gmail.com"), true);
     }
   }
   @Test(enabled = true)
@@ -40,14 +40,13 @@ public class ContactModificationTests extends TestBase {
             .withFirstName("newfname")
             .withLastName("lName")
             .withAddress("Moscow")
-            .withPhone("999999999")
+            .withHomePhone("999999999")
             .withEmail("etarnovskaya@gmail.com")
             .withNotes("hhkjhk");
 
     app.contact().modify(contact);
+    Assert.assertEquals(app.contact().count(), before.size());
     Contacts after = app.contact().all();
-    Assert.assertEquals(after.size(), before.size());
-
     assertThat(after, equalTo(before.withOut(modifiedContact).withAdded(contact)));
 
     }

@@ -59,6 +59,7 @@ public void selectGroupById(int id) {
     initGroupCreation();
     fillGroupForm(group);
     submitGroupCreation();
+    groupCache = null;
     returnToGroupPage();
   }
 
@@ -67,6 +68,7 @@ public void selectGroupById(int id) {
   public void delete(GroupData group) {
     selectGroupById(group.getId());
     deleteSelectedGroup();
+    groupCache = null;
     returnToGroupPage();
   }
 
@@ -76,6 +78,7 @@ public void selectGroupById(int id) {
     initGroupModification();
     fillGroupForm(group);
     submitGroupModification();
+    groupCache = null;
     returnToGroupPage();
   }
 
@@ -83,7 +86,7 @@ public void selectGroupById(int id) {
     return isElementPresent(By.name("selected[]"));
   }
 
-  public int getGroupCount() {
+  public int count() {
     return wd.findElements(By.name("selected[]")).size();
 
   }
@@ -92,17 +95,22 @@ public void selectGroupById(int id) {
     click(By.xpath("//div[@id='content']/form/input[6]"));
   }
 
+  private Groups groupCache = null;
+
 
 
   public Groups all() {
-    Groups groups = new Groups();
+    if (groupCache != null){
+      return new Groups(groupCache);
+    }
+    groupCache = new Groups();
     List<WebElement> elements = wd.findElements(By.cssSelector("span.group"));
     for (WebElement element : elements) {
       String name = element.getText();
       int id = Integer.parseInt(element.findElement(By.name("selected[]")).getAttribute("value"));
-      groups.add(new GroupData().withId(id).withName(name));
+      groupCache.add(new GroupData().withId(id).withName(name));
     }
-    return groups;
+    return new Groups(groupCache);
   }
 
 

@@ -20,7 +20,9 @@ public class ContactDeletionTests extends TestBase {
                       .withFirstName("newfname")
                       .withLastName("lName")
                       .withAddress("Moscow")
-                      .withPhone("999999999")
+                      .withHomePhone("999999999")
+                      .withMobilePhone("879787899")
+                      .withWorkPhone("3354354")
                       .withEmail("etarnovskaya@gmail.com"),true);
     }
   }
@@ -31,8 +33,9 @@ public class ContactDeletionTests extends TestBase {
     Contacts before = app.contact().all();
     ContactData deletedContact = before.iterator().next();
     app.contact().delete(deletedContact);
+    Assert.assertEquals(app.contact().count(), before.size() - 1);
+
     Contacts after = app.contact().all();
-    Assert.assertEquals(after.size(), before.size() - 1);
 
    MatcherAssert.assertThat(before, CoreMatchers.equalTo(before.withOut(deletedContact)));
 
