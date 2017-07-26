@@ -1,5 +1,7 @@
 package ru.stqa.pdt.adressbook.model;
 
+import static java.awt.SystemColor.text;
+
 public class ContactData {
   private  int id = Integer.MAX_VALUE;;
 
@@ -49,6 +51,7 @@ public class ContactData {
 
   public ContactData withGroup(String group) {
     this.group = group;
+
     return this;
 
   }
