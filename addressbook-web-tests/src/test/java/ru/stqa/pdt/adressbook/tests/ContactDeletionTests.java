@@ -14,6 +14,7 @@ import java.util.Set;
 public class ContactDeletionTests extends TestBase {
   @BeforeMethod
   public void insurePreconditions() {
+    app.goTo().homePage();
     if (app.contact().all().size() == 0) {
       app.contact().create(
               new ContactData()
@@ -37,7 +38,7 @@ public class ContactDeletionTests extends TestBase {
 
     Contacts after = app.contact().all();
 
-   MatcherAssert.assertThat(before, CoreMatchers.equalTo(before.withOut(deletedContact)));
+   MatcherAssert.assertThat(after, CoreMatchers.equalTo(before.withOut(deletedContact)));
 
 
   }
