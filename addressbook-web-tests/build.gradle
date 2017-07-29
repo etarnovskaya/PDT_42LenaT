@@ -10,4 +10,5 @@ dependencies{
     testCompile 'org.seleniumhq.selenium:selenium-java:3.4.0'
     testCompile 'junit:junit:4.12'
     testCompile 'org.hamcrest:java-hamcrest:2.0.0.0'
+    compile 'com.beust:jcommander:1.72'
 }

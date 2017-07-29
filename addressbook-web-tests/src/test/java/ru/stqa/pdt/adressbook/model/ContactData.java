@@ -1,5 +1,7 @@
 package ru.stqa.pdt.adressbook.model;
 
+import java.io.File;
+
 import static java.awt.SystemColor.text;
 
 public class ContactData {
@@ -18,7 +20,18 @@ public class ContactData {
   private String email2;
   private String email3;
   private String notes;
+
+  public File getPhoto() {
+    return photo;
+  }
+
+  public ContactData withPhoto(File photo) {
+    this.photo = photo;
+    return this;
+  }
+
   private String group;
+  private File photo;
 
   public ContactData withAllEmails(String allEmails) {
     this.allEmails = allEmails;
