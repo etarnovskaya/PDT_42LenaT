@@ -10,17 +10,17 @@ import ru.stqa.pdt.adressbook.appmanager.ApplicationManager;
  */
 public class TestBase {
 
-  protected static final ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);
+  protected static final ApplicationManager app = new ApplicationManager(System.getProperty("browser", BrowserType.CHROME));
  //protected final ApplicationManager app = new ApplicationManager(BrowserType.CHROME);
   //protected final ApplicationManager app = new ApplicationManager(BrowserType.IE);
 
-  @BeforeClass
+  @BeforeSuite
   public void setUp() throws Exception {
     app.init();
   }
 
 
-  @AfterClass
+  @AfterSuite
   public void tearDown() {
     app.stop();
   }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pdt.adressbook.tests.GroupDeletionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-07-30T11:59:35" hostname="Lena-TOSH" time="4.248">
+  <properties/>
+  <testcase name="testGroupDeletionLastInTheList" classname="ru.stqa.pdt.adressbook.tests.GroupDeletionTests" time="4.248"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
