@@ -1,40 +1,95 @@
 package ru.stqa.pdt.adressbook.model;
 
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import org.hibernate.annotations.Type;
 
+import javax.persistence.*;
 import java.io.File;
 
 import static java.awt.SystemColor.text;
 
+@Entity
+@Table(name = "addressbook")
 public class ContactData {
   @XStreamOmitField
+
+  @Id
+  @Column(name = "id")
   private  int id = Integer.MAX_VALUE;;
 
+  @Column(name = "firstname")
   private String firstName;
+
+  @Column(name ="middlename")
   private String middleName;
+
+  @Column(name = "lastname")
   private String lastName;
+
+  @Column(name = "address")
+  @Type(type = "text")
   private String address;
+
+  @Column(name = "home")
+  @Type(type = "text")
   private String homePhone;
+
+  @Column(name = "mobile")
+  @Type(type = "text")
   private String mobilePhone;
+
+  @Column(name = "work")
+  @Type(type = "text")
   private String workPhone;
+
+  @Transient
   private String allPhones;
+
+  @Transient
   private String allEmails;
+
+  @Column(name = "email")
+  @Type(type = "text")
   private String email;
+
+  @Column(name = "email2")
+  @Type(type = "text")
   private String email2;
+
+  @Column(name = "email3")
+  @Type(type = "text")
   private String email3;
+
+  @Column(name = "notes")
+  @Type(type = "text")
   private String notes;
 
+  @Transient
+  private String group;
+
+  @Column(name = "photo")
+  @Type(type = "text")
+  private String photo;
+
+  @Override
+  public String toString() {
+    return "ContactData{" +
+            "id=" + id +
+            ", firstName='" + firstName + '\'' +
+            ", lastName='" + lastName + '\'' +
+            '}';
+  }
+
   public File getPhoto() {
-    return photo;
+    return new File(photo);
   }
 
   public ContactData withPhoto(File photo) {
-    this.photo = photo;
+    this.photo = photo.getPath();
     return this;
   }
 
-  private String group;
-  private File photo;
+
 
   public ContactData withAllEmails(String allEmails) {
     this.allEmails = allEmails;
@@ -188,17 +243,6 @@ public class ContactData {
     return group;
   }
 
-
-
-  @Override
-  public String toString() {
-    return "ContactData{" +
-           "id='" + id + '\'' +
-           "lastName='" + lastName + '\'' +
-            ", firstName='" + firstName + '\'' +
-
-            '}';
-  }
 
   @Override
   public boolean equals(Object o) {

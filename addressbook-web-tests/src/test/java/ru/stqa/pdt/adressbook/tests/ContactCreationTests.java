@@ -3,6 +3,8 @@ package ru.stqa.pdt.adressbook.tests;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.pdt.adressbook.model.ContactData;
@@ -19,6 +21,9 @@ import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.*;
 
 public class ContactCreationTests extends TestBase {
+  Logger logger = LoggerFactory.getLogger(ContactCreationTests.class);
+
+
   @DataProvider
   public Iterator<Object[]> validContactsFromXml() throws IOException {
     try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/groups.xml")))){
@@ -26,8 +31,6 @@ public class ContactCreationTests extends TestBase {
       String line = reader.readLine();
       while (line != null){
         xml += line;
-        // String[] split = line.split(";");
-        // list.add(new Object[]{new ContactData().withFirstName(split[0]).withLastName(split[1])});
         line = reader.readLine();
       }
       XStream xstream = new XStream();
@@ -56,6 +59,7 @@ public class ContactCreationTests extends TestBase {
 
   @Test(dataProvider = "validContactsFromXml")
   public void testContactCreation(ContactData contact) {
+    logger.info("start test testContactCreation");
     app.goTo().homePage();
     Contacts before = app.contact().all();
     app.contact().create(contact);
@@ -64,6 +68,7 @@ public class ContactCreationTests extends TestBase {
 
 
     assertThat(after, equalTo(before.withAdded(contact.withId(after.stream().mapToInt((c)->c.getId()).max().getAsInt()))));
+    logger.info("stop test testContactCreation");
   }
 
 
