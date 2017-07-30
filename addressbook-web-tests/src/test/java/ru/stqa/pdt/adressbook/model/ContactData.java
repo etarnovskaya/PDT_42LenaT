@@ -1,10 +1,13 @@
 package ru.stqa.pdt.adressbook.model;
 
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
+
 import java.io.File;
 
 import static java.awt.SystemColor.text;
 
 public class ContactData {
+  @XStreamOmitField
   private  int id = Integer.MAX_VALUE;;
 
   private String firstName;
@@ -190,8 +193,8 @@ public class ContactData {
   @Override
   public String toString() {
     return "ContactData{" +
-            ", id='" + id + '\'' +
-            ", lastName='" + lastName + '\'' +
+           "id='" + id + '\'' +
+           "lastName='" + lastName + '\'' +
             ", firstName='" + firstName + '\'' +
 
             '}';
