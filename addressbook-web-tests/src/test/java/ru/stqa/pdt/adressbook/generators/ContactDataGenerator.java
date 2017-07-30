@@ -76,8 +76,22 @@ public class ContactDataGenerator {
     List<ContactData> contacts = new ArrayList<>();
     for(int i=0; i<count;i++){
       contacts.add(new ContactData().withFirstName(String.format("test %s", i))
-              .withLastName(String.format("test %s", i)));
+              .withMiddleName(null)
+              .withLastName(String.format("test %s", i))
+              .withAddress(String.format("test %s", i))
+              .withHomePhone(String.format("test %s", i))
+              .withEmail("etarnovskaya@gmail.com")
+              .withGroup(null)
+              .withNotes(null));
     }
     return contacts;
   }
 }
+//    ContactData contact = new ContactData()
+//            .withFirstName("onewfname")
+//            .withMiddleName(null)
+//            .withLastName("lName")
+//            .withAddress("Moscow")
+//            .withHomePhone("999999999")
+//            .withEmail("etarnovskaya@gmail.com").withGroup(null).withNotes(null)
+//            .withNotes(null);

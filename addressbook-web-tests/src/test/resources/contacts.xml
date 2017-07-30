@@ -2,13 +2,22 @@
   <contact>
     <firstName>test 0</firstName>
     <lastName>test 0</lastName>
+    <address>test 0</address>
+    <homePhone>test 0</homePhone>
+    <email>etarnovskaya@gmail.com</email>
   </contact>
   <contact>
     <firstName>test 1</firstName>
     <lastName>test 1</lastName>
+    <address>test 1</address>
+    <homePhone>test 1</homePhone>
+    <email>etarnovskaya@gmail.com</email>
   </contact>
   <contact>
     <firstName>test 2</firstName>
     <lastName>test 2</lastName>
+    <address>test 2</address>
+    <homePhone>test 2</homePhone>
+    <email>etarnovskaya@gmail.com</email>
   </contact>
 </list>
