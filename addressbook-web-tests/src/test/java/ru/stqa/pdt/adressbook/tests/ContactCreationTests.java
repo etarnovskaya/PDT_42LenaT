@@ -23,10 +23,9 @@ import static org.hamcrest.MatcherAssert.*;
 public class ContactCreationTests extends TestBase {
   Logger logger = LoggerFactory.getLogger(ContactCreationTests.class);
 
-
   @DataProvider
   public Iterator<Object[]> validContactsFromXml() throws IOException {
-    try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/groups.xml")))){
+    try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.xml")))){
       String xml = "";
       String line = reader.readLine();
       while (line != null){
@@ -43,7 +42,7 @@ public class ContactCreationTests extends TestBase {
 
   @DataProvider
   public Iterator<Object[]> validContactsFromJson() throws IOException {
-    try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/groups.json")))){
+    try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.json")))){
       String json = "";
       String line = reader.readLine();
       while (line != null){
@@ -60,11 +59,11 @@ public class ContactCreationTests extends TestBase {
   @Test(dataProvider = "validContactsFromXml")
   public void testContactCreation(ContactData contact) {
     logger.info("start test testContactCreation");
+    Contacts before = app.db().contacts();
     app.goTo().homePage();
-    Contacts before = app.contact().all();
     app.contact().create(contact);
    assertThat(app.contact().count(), equalTo(before.size() + 1));
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
 
 
     assertThat(after, equalTo(before.withAdded(contact.withId(after.stream().mapToInt((c)->c.getId()).max().getAsInt()))));

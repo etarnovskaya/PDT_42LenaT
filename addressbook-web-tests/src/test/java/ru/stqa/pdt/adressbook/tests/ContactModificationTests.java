@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.pdt.adressbook.model.ContactData;
 import ru.stqa.pdt.adressbook.model.Contacts;
+import ru.stqa.pdt.adressbook.model.GroupData;
 
 import java.util.Comparator;
 import java.util.List;
@@ -21,20 +22,16 @@ import static org.hamcrest.MatcherAssert.*;
 public class ContactModificationTests extends TestBase {
   @BeforeMethod
   public void insurePreconditions(){
-    app.goTo().homePage();
-    if (app.contact().all().size()==0){
-      app.contact().create(new ContactData()
-              .withFirstName("fname")
-              .withLastName("lName")
-              .withAddress("Moscow")
-              .withHomePhone("999999999").withEmail("etarnovskaya@gmail.com"), true);
+    if(app.db().contacts().size()== 0){
+      app.goTo().homePage();
+      app.contact().create(new ContactData().withLastName("test1").withFirstName("test1").withAddress("Moscow")
+              .withHomePhone("999999999").withEmail("etarnovskaya@gmail.com"));
     }
-  }
+   }
   @Test(enabled = true)
   public void testContactModificationLastInList() {
+    Contacts before = app.db().contacts();
     app.goTo().homePage();
-
-    Contacts before = app.contact().all();
     ContactData modifiedContact = before.iterator().next();
     ContactData contact = new ContactData()
             .withId(modifiedContact.getId())
@@ -47,7 +44,7 @@ public class ContactModificationTests extends TestBase {
 
     app.contact().modify(contact);
     Assert.assertEquals(app.contact().count(), before.size());
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
     assertThat(after, equalTo(before.withOut(modifiedContact).withAdded(contact)));
 
     }

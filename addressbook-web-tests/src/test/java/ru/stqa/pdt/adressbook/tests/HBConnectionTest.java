@@ -32,7 +32,7 @@ public class HBConnectionTest {
     }
   }
   @Test
-  public void testHBConnrction(){
+  public void testHBGroupData(){
     Session session = sessionFactory.openSession();
     session.beginTransaction();
     List<GroupData> result = session.createQuery( "from GroupData" ).list();

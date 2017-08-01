@@ -32,7 +32,7 @@ public class ContactHelper extends HelperBase {
     type(By.name("work"), contactData.getWorkPhone());
     type(By.name("email"), contactData.getEmail());
     type(By.name("notes"), contactData.getNotes());
-    attach(By.name("photo"),contactData.getPhoto());
+   // attach(By.name("photo"),contactData.getPhoto());
 
 
 
@@ -43,7 +43,7 @@ public class ContactHelper extends HelperBase {
       Assert.assertFalse(isElementPresent(By.name("new_group")));
 
     }
-  }
+   }
   }
 
   public void initContactCreation() {
