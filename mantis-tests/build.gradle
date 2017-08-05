@@ -9,8 +9,7 @@ dependencies{
     testCompile 'org.testng:testng:6.11'
     testCompile 'org.seleniumhq.selenium:selenium-java:3.4.0'
     testCompile 'org.hamcrest:java-hamcrest:2.0.0.0'
-
-
+    compile 'commons-net:commons-net:3.4'
 }
 test (type: Test){
     useTestNG{
@@ -24,7 +23,7 @@ test (type: Test){
     }
     if (project.hasProperty('verifyUI')){
         systemProperty 'verifyUI', "${verifyUI}"
-    }
+  }
 
 
 }
