@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import ru.stqa.pdt.adressbook.model.ContactData;
 import ru.stqa.pdt.adressbook.model.Contacts;
 import ru.stqa.pdt.adressbook.model.GroupData;
+import ru.stqa.pdt.adressbook.model.Groups;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -58,6 +59,8 @@ public class ContactCreationTests extends TestBase {
 
   @Test(dataProvider = "validContactsFromXml")
   public void testContactCreation(ContactData contact) {
+    Groups groups= app.db().groups();
+
     logger.info("start test testContactCreation");
     Contacts before = app.db().contacts();
     app.goTo().homePage();
@@ -65,11 +68,24 @@ public class ContactCreationTests extends TestBase {
    assertThat(app.contact().count(), equalTo(before.size() + 1));
     Contacts after = app.db().contacts();
 
-
     assertThat(after, equalTo(before.withAdded(contact.withId(after.stream().mapToInt((c)->c.getId()).max().getAsInt()))));
     logger.info("stop test testContactCreation");
   }
 
+  @Test
+    public void testContactCreationWithGroup() {
+    Groups groups = app.db().groups();
+    app.goTo().homePage();
+    Contacts before = app.db().contacts();
 
+    ContactData contact = new ContactData().withFirstName("name").inGroup(groups.iterator().next());
+    app.contact().create(contact);
+
+
+
+    Contacts after = app.db().contacts();
+    assertThat(after, equalTo(before.withAdded(contact.withId(after.stream().mapToInt((c)->c.getId()).max().getAsInt()))));
+    logger.info("stop test testContactCreation");
+  }
 
 }

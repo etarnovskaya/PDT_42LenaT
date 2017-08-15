@@ -16,9 +16,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HttpSession {
-
-  private  ApplicationManager app;
   private  CloseableHttpClient httpclient;
+  private  ApplicationManager app;
+
 
   public HttpSession(ApplicationManager app) {
     this.app = app;

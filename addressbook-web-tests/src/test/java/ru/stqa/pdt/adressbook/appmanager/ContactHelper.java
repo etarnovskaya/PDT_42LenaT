@@ -35,14 +35,15 @@ public class ContactHelper extends HelperBase {
    // attach(By.name("photo"),contactData.getPhoto());
 
 
-
-    if(contactData.getGroup() != null){
     if (creation){
-      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+    if(contactData.getGroups().size() > 0){
+      Assert.assertTrue(contactData.getGroups().size()==1);
+    }
+      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroups().iterator().next().getGroupName());
     } else {
       Assert.assertFalse(isElementPresent(By.name("new_group")));
 
-    }
+//    }
    }
   }
 
@@ -188,4 +189,19 @@ return contacts;
   }
 
 
+  public void selectExistsGroup() {
+    wd.findElement(By.name("to_group")).click();
+     }
+
+  public void clickOnTheAddGroup() {
+    wd.findElement(By.name("add")).click();
+  }
+
+  public void displayGroup() {
+    wd.findElement(By.xpath("//select[@name='group']")).click();
+  }
+
+  public void clickOnRemoveContactFromGroupButton() {
+    wd.findElement(By.name("remove")).click();
+  }
 }

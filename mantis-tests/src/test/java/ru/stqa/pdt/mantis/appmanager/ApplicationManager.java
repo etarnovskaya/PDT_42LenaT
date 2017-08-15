@@ -21,7 +21,11 @@ public class ApplicationManager {
   private WebDriver wd;
   private String browser;
   private RegistrationHelper registrationHelper;
-  private FtpHelper ftp;
+  private LogInHelper loginHelper;
+  private  NavigationHelper navigationHelper;
+  private UserHelper userHelper;
+  private MailHelper mailHelper;
+
 
   public ApplicationManager(String browser){
     this.browser = browser;
@@ -53,14 +57,37 @@ public class ApplicationManager {
     } return registrationHelper;
   }
 
-  public ChangePasswordHelper changePassword() {
-    return new ChangePasswordHelper(this);
+  public MailHelper mail(){
+    if(mailHelper == null){
+      mailHelper = new MailHelper(this);
+    } return mailHelper;
   }
-  public FtpHelper ftp() {
-    if(ftp == null){
-      ftp = new FtpHelper(this);
-    } return ftp;
-     }
+
+  public NavigationHelper navigate() {
+    if(navigationHelper == null){
+      navigationHelper = new NavigationHelper(this);
+    } return navigationHelper;
+  }
+
+  public UserHelper user() {
+    if(userHelper == null){
+      userHelper = new UserHelper(this);
+    } return userHelper;
+  }
+
+
+
+  public  LogInHelper login(){
+    if (loginHelper == null){
+      loginHelper = new LogInHelper(this);
+    } return  loginHelper;
+  }
+
+//  public FtpHelper ftp() {
+//    if(ftp == null){
+//      ftp = new FtpHelper(this);
+//    } return ftp;
+//     }
 
   public WebDriver getDriver() {
     if(wd == null){
@@ -76,4 +103,8 @@ public class ApplicationManager {
     }
     return wd;
   }
+
+
+
+
 }
