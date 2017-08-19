@@ -7,7 +7,7 @@ import java.util.List;
 public class Collections {
   public static void main(String[] args){
     String langs[] = {"java", "Pyton", "Ruby"};
-    List<String> languages = new ArrayList<String>();
+    //List<String> languages = new ArrayList<String>();
     //    List<String> languages = Arrays.asList();
 
     for(String l:langs){
